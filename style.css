@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "old_english";
+    src: url(fonts/UnifrakturCook-Bold.ttf);
+}
+@font-face {
+    font-family: "old_russian";
+    src: url(fonts/ofont.ru_Lombardina\ Two.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+li {
+    list-style: none;
+    
+}
+
+.header {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 100vh; */
+    position: relative;
+
+}
+
+.header__nav {
+    width: 100vh;
+    font-family: 'old_english';
+    font-size: 35px;
+    height: 10vh;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.header__ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-right: 45px;
+    
+
+}
+
+
+
+
+/*burger*/
+
+.header__burger {
+    width: 52px;
+    height: 52px;
+    background-image: url(images/horizontal_menu_burger_icon_227407.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+
+
+}
+
+.header.is__active-background {
+    background-color: #000;
+    height: 100vh;
+    z-index: 4;
+}
+
+
+
+.header__burger.is__active {
+    display: block;
+    background-image: url(images/cross-sign-in-a-rounded-square_icon-icons.com_70757.svg);
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    z-index: 4;
+
+}
+
+.header__nav.is__active-menu {
+    display: flex;
+    border: none;
+    
+
+    
+}
+ .header__ul.is__active-menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100vh;
+    margin-left: 40vh;
+    
+    
+   
+   
+    
+}
+
+a.is__active-link {
+    color: #fff;
+}
+
+
+
+
+
+/* button */
+
+
+.button {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.button__order {
+    position: absolute;
+    top: -50vh;
+    border: 1px solid #000;
+    width: 15vh;
+    height: 5vh;
+    font-family: 'old_english';
+    background-color: #fff;
+
+}
+
+
+
+.button__order:hover {
+    background-color: #000;
+    color: #fff;
+    
+
+}
+
+/* form */
+
+.form-zone {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+.form {
+    display: none;
+    position: relative;
+    z-index: 2;
+    width: 600px;
+    height: 650px;
+    background-color: #000;
+    font-family: 'old_russian';
+    
+    
+
+}
+
+.form.is__active-form {
+    display: block;
+    margin-top: 50px;
+}
+
+.form legend {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.form__user  {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form__delivery-delivery {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.form__delivery-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__delivery label {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form__date {
+    display: flex;
+    justify-content: center;
+}
+
+.form span {
+    color: #fff;
+}
+
+.form textarea {
+    padding-left: 15px;
+    font-family: 'old_russian' ;
+}
+
+.form__user-label input,
+.form__delivery-text input {
+    height: 5vh;
+    padding-left: 15px;
+    font-family: 'old_russian' ;
+    
+
+}
+
+.form__checkbox {
+    color: #fff;
+    font-family: 'old_russian';
+}
+
+
+
+fieldset {
+    border: none;
+}
+
+.submit {
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #000;
+    width: 15vh;
+    height: 5vh;
+    font-family: 'old_english';
+    background-color: #fff;
+}
+
+.submit:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    
+
+}
+
+
+
+/*adaptive*/
+
+@media screen and (max-width:1000px) {
+    .header__burger {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    
+}
+
+@media screen and (max-width:750px) {
+    .form.is__active-form {
+        margin-top: 70px;
+        height: 800px;
+    }
+
+    .form__user-label,
+    .form__delivery-delivery,
+    .form__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .form__user-label,
+    .form__user-label input
+    {
+       width: 100%;
+    }
+    .form__checkbox {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    
+}
+@media screen and (max-width:700px) {
+    .header__ul.is__active-menu-list {
+        margin-left: 35%;
+        }
+
+    
+    
+}
+
+@media screen and (max-width:400px) {
+    .header__ul.is__active-menu-list {
+        margin-left: 25%;
+        }
+    
+}
