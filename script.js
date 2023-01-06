@@ -3,9 +3,25 @@ let menu = document.querySelector('.header__nav');
 let ul = document.querySelector('.header__ul');
 let header = document.querySelector('.header');
 let link = document.getElementsByTagName('a');
-let button = document.querySelector('.button')
-let form = document.querySelector('.form')
-let formZone = document.querySelector('.form-zone')
+let button = document.querySelector('.button');
+let form = document.querySelector('.form');
+let formZone = document.querySelector('.form-zone');
+let modal = document.querySelector('.modal');
+
+let modalAppear = function (){
+    if(window.innerWidth >1000){
+        setTimeout("modal.style.display = 'flex'", 2000);
+        
+    }
+    
+    
+};
+modalAppear();
+let modalClose = function (){
+    setTimeout("modal.style.display = 'none'", 10000);
+    
+};
+modalClose();
 
 
 burger.addEventListener('click', ()=> {
@@ -27,11 +43,13 @@ for (let i = 0; i < link.length; i++) {
 button.addEventListener('click', ()=>{
     form.classList.toggle('is__active-form');
     
+    
 })
 
 document.addEventListener('click', (e)=>{
     if(e.target === form||e.target === formZone){
         form.classList.remove('is__active-form');
+        form.style.transition = '0.5s all'
         
     }
 })
