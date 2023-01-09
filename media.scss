@@ -1,0 +1,48 @@
+@include desktop {
+    .header__burger {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+    }
+}
+
+
+@include desktop_small {
+    .form.is__active-form {
+        margin-top: 70px;
+        height: 800px;
+    }
+
+    .form__user-label,
+    .form__delivery-delivery,
+    .form__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .form__user-label,
+    .form__user-label input {
+        width: 100%;
+    }
+
+    .form__checkbox {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@include laptop {
+    .header__ul.is__active-menu-list {
+        margin-left: 35%;
+    }
+}
+
+@include mobile {
+    .header__ul.is__active-menu-list {
+        margin-left: 25%;
+    }
+}

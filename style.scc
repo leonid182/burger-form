@@ -6,6 +6,46 @@
   font-family: "old_russian";
   src: url(fonts/ofont.ru_Lombardina\ Two.ttf);
 }
+@media (max-width: 1000px) {
+  .header__burger {
+    display: block;
+  }
+  .header__nav {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .form.is__active-form {
+    margin-top: 70px;
+    height: 800px;
+  }
+  .form__user-label,
+  .form__delivery-delivery,
+  .form__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .form__user-label,
+  .form__user-label input {
+    width: 100%;
+  }
+  .form__checkbox {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .header__ul.is__active-menu-list {
+    margin-left: 35%;
+  }
+}
+@media (max-width: 400px) {
+  .header__ul.is__active-menu-list {
+    margin-left: 25%;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -83,6 +123,11 @@ li {
   position: absolute;
   top: 2vh;
   right: 2vh;
+}
+@media (max-width: 1000px) {
+  .header__burger .header__burger {
+    display: block;
+  }
 }
 
 .header.is__active-background {
@@ -239,45 +284,4 @@ fieldset {
   border: 1px solid #fff;
 }
 
-@media (max-width: 1000px) {
-  .header__burger {
-    display: block;
-  }
-  .header__nav {
-    display: none;
-  }
-}
-@media (max-width: 750px) {
-  .form.is__active-form {
-    margin-top: 70px;
-    height: 800px;
-  }
-  .form__user-label,
-  .form__delivery-delivery,
-  .form__date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  .form__user-label,
-  .form__user-label input {
-    width: 100%;
-  }
-  .form__checkbox {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (max-width: 700px) {
-  .header__ul.is__active-menu-list {
-    margin-left: 35%;
-  }
-}
-@media (max-width: 400px) {
-  .header__ul.is__active-menu-list {
-    margin-left: 25%;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scc.map */
